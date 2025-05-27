@@ -24,6 +24,11 @@ function toggleTask(index) {
   displayTasks();
 }
 
+function deleteTask(index) {
+  tasks.splice(index, 1);
+  displayTasks();
+}
+
 function clearCompleted() {
   tasks = tasks.filter(task => !task.completed);
   displayTasks();
@@ -50,7 +55,10 @@ function displayTasks(filter = "all") {
     li.className = task.completed ? "completed" : "";
     li.innerHTML = `
       <span>${task.text} - ${task.priority} - ${task.dueDate}</span>
-      <input type="checkbox" ${task.completed ? "checked" : ""} onchange="toggleTask(${index})"/>
+      <div>
+        <input type="checkbox" ${task.completed ? "checked" : ""} onchange="toggleTask(${index})"/>
+        <button onclick="deleteTask(${index})" style="margin-left: 8px; background: crimson; color: white; border: none; border-radius: 5px; cursor: pointer;">🗑️</button>
+      </div>
     `;
     taskList.appendChild(li);
   });
