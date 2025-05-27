@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('https://plus.unsplash.com/premium_photo-1683309563562-aa3cfde9ed10?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.todo-box {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: #1d0202;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+
+.subtitle {
+  margin-bottom: 1em;
+  color: #7c064ddd;
+  text-size-adjust:bold;
+}
+
+.input-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.input-section input,
+.input-section select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+  flex: 1 1 130px;
+}
+
+.input-section button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background: #4e8cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.filter-buttons button {
+  margin: 5px;
+  padding: 8px 12px;
+  background-color: #d2e9ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+}
+
+.filter-buttons .active {
+  background-color: #4e8cff;
+  color: white;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+ul li {
+  background: rgba(255, 255, 255, 0.5);
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+}
+
+ul li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  color: #fff;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1m;
+  color:rgb(183, 34, 44);
+}

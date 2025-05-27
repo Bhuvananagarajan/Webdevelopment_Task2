@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Tasks - ToDo List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="todo-box">
+      <h1>Organize your day</h1>
+      <p class="subtitle">Achieve your goals efficiently</p>
+      <div class="input-section">
+        <input type="text" id="taskInput" placeholder="What needs to be done" />
+        <select id="priority">
+          <option>High</option>
+          <option selected>Medium</option>
+          <option>Low</option>
+        </select>
+        <input type="date" id="dueDate" />
+        <button onclick="addTask()">+</button>
+      </div>
+
+      <div class="filter-buttons">
+        <button onclick="filterTasks('all')" id="allBtn" class="active">All</button>
+        <button onclick="filterTasks('pending')" id="pendingBtn">Pending</button>
+        <button onclick="filterTasks('completed')" id="completedBtn">Completed</button>
+      </div>
+
+      <ul id="taskList"></ul>
+
+      <div class="footer">
+        <button onclick="clearCompleted()">Clear Completed 🗑️</button>
+        <div class="quote">"Small steps every day lead to big results."</div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
